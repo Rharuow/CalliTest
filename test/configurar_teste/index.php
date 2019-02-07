@@ -779,7 +779,7 @@
 
                                 <label id="label_red_black_bateria<?php echo $i; ?>" class="btn label_red_black_bateria" for="input_color_red_black_bateria<?php echo $i; ?>" style="background:#800000; width:100%; height:40px; font-size:2em;"></label>
 
-                                <input onclick="CoresBateria()" class="input_color_red_black_bateria" id="input_color_red_black_bateria<?php echo $i; ?>" name="input_color_red_black_bateria" type="checkbox" value="#800000">
+                                <input onclick="CoresBateria()" class="input_color_red_black_bateria" id="input_color_red_black_bateria<?php echo $i; ?>" name="input_color_red_black_bateria" type="checkbox" value="#800000" hidden>
 
                             </div>
 
@@ -787,7 +787,7 @@
 
                                 <label id="label_orange_black_bateria<?php echo $i; ?>" class="btn label_orange_black_bateria" for="input_color_orange_black_bateria<?php echo $i; ?>" style="background:#805300; width:100%; height:40px; font-size:2em;"></label>
 
-                                <input onclick="CoresBateria()" id="input_color_orange_black_bateria<?php echo $i; ?>" name="input_color_orange_black_bateria" type="checkbox" hidden>
+                                <input onclick="CoresBateria()" class="input_color_orange_black_bateria" id="input_color_orange_black_bateria<?php echo $i; ?>" name="input_color_orange_black_bateria" type="checkbox" hidden>
 
                             </div>
 
@@ -795,7 +795,7 @@
 
                                 <label id="label_yellow_black_bateria<?php echo $i; ?>" class="btn label_yellow_black_bateria" for="input_color_yellow_black_bateria<?php echo $i; ?>" style="background:#808000; width:100%; height:40px;font-size:2em;"></label>
 
-                                <input id="input_color_yellow_black_bateria<?php echo $i; ?>" onclick="CoresBateria()" name="input_color_yellow_black_bateria" type="checkbox" hidden>
+                                <input id="input_color_yellow_black_bateria<?php echo $i; ?>" class="input_color_yellow_black_bateria" onclick="CoresBateria()" name="input_color_yellow_black_bateria" type="checkbox" hidden>
 
                             </div>
 
@@ -803,7 +803,7 @@
 
                                 <label id="label_green_black_bateria<?php echo $i; ?>" class="btn label_green_black_bateria" for="input_color_green_black_bateria<?php echo $i; ?>" style="background:#008000; width:100%; height:40px;font-size:2em;"></label>
 
-                                <input id="input_color_green_black_bateria<?php echo $i; ?>" onclick="CoresBateria()" name="input_color_green_black_bateria" type="checkbox" hidden>
+                                <input id="input_color_green_black_bateria<?php echo $i; ?>" class="input_color_green_black_bateria" onclick="CoresBateria()" name="input_color_green_black_bateria" type="checkbox" hidden>
 
                             </div>
 
@@ -811,7 +811,7 @@
 
                                 <label id="label_blue_black_bateria<?php echo $i; ?>" class="btn label_blue_black_bateria" for="input_color_blue_black_bateria<?php echo $i; ?>" style="background:#000080; width:100%; height:40px;font-size:2em;"></label>
 
-                                <input id="input_color_blue_black_bateria<?php echo $i; ?>" onclick="CoresBateria()" name="input_color_blue_black_bateria" type="checkbox" hidden>
+                                <input id="input_color_blue_black_bateria<?php echo $i; ?>" class="input_color_blue_black_bateria" onclick="CoresBateria()" name="input_color_blue_black_bateria" type="checkbox" hidden>
 
                             </div>
 
@@ -819,7 +819,7 @@
 
                                 <label id="label_purple_black_bateria<?php echo $i; ?>" class="btn label_purple_black_bateria" for="input_color_purple_black_bateria<?php echo $i; ?>" style="background:#800080; width:100%; height:40px;font-size:2em;"></label>
 
-                                <input id="input_color_purple_black_bateria<?php echo $i; ?>" onclick="CoresBateria()" name="input_color_purple_dark_bateria" type="checkbox" hidden>
+                                <input id="input_color_purple_black_bateria<?php echo $i; ?>" class="input_color_purple_black_bateria" onclick="CoresBateria()" name="input_color_purple_dark_bateria" type="checkbox" hidden>
 
                             </div>
 
@@ -831,7 +831,7 @@
 
                                 <label id="label_red_bateria<?php echo $i; ?>" class="btn label_red_bateria" for="input_color_red_bateria<?php echo $i; ?>" style="background:#ff0000; width:100%; height:40px;font-size:2em;"></label>
 
-                                <input id="input_color_red_bateria<?php echo $i; ?>" onclick="CoresBateria()" name="input_color_red_bateria" type="checkbox" hidden>
+                                <input id="input_color_red_bateria<?php echo $i; ?>" class="input_color_red_bateria" onclick="CoresBateria()" name="input_color_red_bateria" type="checkbox" hidden>
 
                             </div>
 
@@ -839,7 +839,7 @@
 
                                 <label id="label_orange_bateria<?php echo $i; ?>" class="btn label_orange_bateria" for="input_color_orange_bateria<?php echo $i; ?>" style="background:#ffa500; width:100%; height:40px;font-size:2em;"></label>
 
-                                <input id="input_color_orange_bateria<?php echo $i; ?>" onclick="CoresBateria()" name="input_color_orange_bateria" type="checkbox" hidden>
+                                <input id="input_color_orange_bateria<?php echo $i; ?>" class="input_color_orange_bateria" onclick="CoresBateria()" name="input_color_orange_bateria" type="checkbox" hidden>
 
                             </div>
 
@@ -847,7 +847,7 @@
 
                                 <label id="label_yellow_bateria<?php echo $i; ?>" class="btn label_yellow_bateria" for="input_color_yellow_bateria<?php echo $i; ?>" style="background:#ffff00; width:100%; height:40px;font-size:2em;"></label>
 
-                                <input id="input_color_yellow_bateria<?php echo $i; ?>" onclick="CoresBateria()" name="input_color_yellow_bateria" type="checkbox" hidden>
+                                <input id="input_color_yellow_bateria<?php echo $i; ?>" class="input_color_yellow_bateria" onclick="CoresBateria()" name="input_color_yellow_bateria" type="checkbox" hidden>
 
                             </div>
 
@@ -855,7 +855,7 @@
 
                                 <label id="label_green_bateria<?php echo $i; ?>" class="btn label_green_bateria" for="input_color_green_bateria<?php echo $i; ?>" style="background:#00ff00; width:100%; height:40px;font-size:2em;"></label>
 
-                                <input id="input_color_green_bateria<?php echo $i; ?>" onclick="CoresBateria()" name="input_color_green_bateria" type="checkbox" hidden>
+                                <input id="input_color_green_bateria<?php echo $i; ?>" class="input_color_green_bateria" onclick="CoresBateria()" name="input_color_green_bateria" type="checkbox" hidden>
 
                             </div>
 
@@ -863,7 +863,7 @@
 
                                 <label id="label_blue_bateria<?php echo $i; ?>" class="btn label_blue_bateria" for="input_color_blue_bateria<?php echo $i; ?>" style="background:#0000ff; width:100%; height:40px;font-size:2em;"></label>
 
-                                <input id="input_color_blue_bateria<?php echo $i; ?>" onclick="CoresBateria()" name="input_color_blue_bateria" type="checkbox" hidden>
+                                <input id="input_color_blue_bateria<?php echo $i; ?>" onclick="CoresBateria()" class="input_color_blue_bateria" name="input_color_blue_bateria" type="checkbox" hidden>
 
                             </div>  
 
@@ -871,7 +871,7 @@
 
                                 <label id="label_purple_bateria<?php echo $i; ?>" class="btn label_purple_bateria" for="input_color_purple_bateria<?php echo $i; ?>" style="background:#ff00ff; width:100%; height:40px;font-size:2em;"></label>
 
-                                <input id="input_color_purple_bateria<?php echo $i; ?>" onclick="CoresBateria()" name="input_color_purple_bateria" type="checkbox" hidden>
+                                <input id="input_color_purple_bateria<?php echo $i; ?>" onclick="CoresBateria()" class="input_color_purple_bateria" name="input_color_purple_bateria" type="checkbox" hidden>
 
                             </div>
 
@@ -883,7 +883,7 @@
 
                                 <label id="label_red_light_bateria<?php echo $i; ?>" class="btn label_red_light_bateria" for="input_color_red_light_bateria<?php echo $i; ?>" style="background:#ff8080; width:100%; height:40px;font-size:2em;"></label>
 
-                                <input id="input_color_red_light_bateria<?php echo $i; ?>" onclick="CoresBateria()" name="input_color_red_light_bateria" type="checkbox" hidden>
+                                <input id="input_color_red_light_bateria<?php echo $i; ?>" class="input_color_red_light_bateria" onclick="CoresBateria()" name="input_color_red_light_bateria" type="checkbox" hidden>
 
                             </div>
 
@@ -891,7 +891,7 @@
 
                                 <label id="label_orange_light_bateria<?php echo $i; ?>" class="btn label_orange_light_bateria" for="input_color_orange_light_bateria<?php echo $i; ?>" style="background:#ffd280; width:100%; height:40px;font-size:2em;"></label>
 
-                                <input id="input_color_orange_light_bateria<?php echo $i; ?>" onclick="CoresBateria()" name="input_color_orange_light_bateria" type="checkbox" hidden>
+                                <input id="input_color_orange_light_bateria<?php echo $i; ?>" class="input_color_orange_light_bateria" onclick="CoresBateria()" name="input_color_orange_light_bateria" type="checkbox" hidden>
 
                             </div>
 
@@ -899,7 +899,7 @@
 
                                 <label id="label_yellow_light_bateria<?php echo $i; ?>" class="btn label_yellow_light_bateria" for="input_color_yellow_light_bateria<?php echo $i; ?>" style="background:#ffff80; width:100%; height:40px;font-size:2em;"></label>
 
-                                <input id="input_color_yellow_light_bateria<?php echo $i; ?>" onclick="CoresBateria()" name="input_color_yellow_light_bateria" type="checkbox" hidden>
+                                <input id="input_color_yellow_light_bateria<?php echo $i; ?>" class="input_color_yellow_light_bateria" onclick="CoresBateria()" name="input_color_yellow_light_bateria" type="checkbox" hidden>
 
                             </div>
 
@@ -907,7 +907,7 @@
 
                                 <label id="label_green_light_bateria<?php echo $i; ?>" class="btn label_green_light_bateria" for="input_color_green_light_bateria<?php echo $i; ?>" style="background:#80ff80; width:100%; height:40px;font-size:2em;"></label>
 
-                                <input id="input_color_green_light_bateria<?php echo $i; ?>" onclick="CoresBateria()" name="input_color_green_light_bateria" type="checkbox" hidden>
+                                <input id="input_color_green_light_bateria<?php echo $i; ?>" class="input_color_green_light_bateria" onclick="CoresBateria()" name="input_color_green_light_bateria" type="checkbox" hidden>
 
                             </div>
 
@@ -915,7 +915,7 @@
 
                                 <label id="label_blue_light_bateria<?php echo $i; ?>" class="btn label_blue_light_bateria" for="input_color_blue_light_bateria<?php echo $i; ?>" style="background:#8080ff; width:100%; height:40px;font-size:2em;"></label>
 
-                                <input id="input_color_blue_light_bateria<?php echo $i; ?>" onclick="CoresBateria()" name="input_color_blue_light_bateria" type="checkbox" hidden>
+                                <input id="input_color_blue_light_bateria<?php echo $i; ?>" class="input_color_blue_light_bateria" onclick="CoresBateria()" name="input_color_blue_light_bateria" type="checkbox" hidden>
 
                             </div>
 
@@ -924,7 +924,7 @@
 
                                 <label id="label_purple_light_bateria<?php echo $i; ?>" class="btn label_purple_light_bateria" for="input_color_purple_light_bateria<?php echo $i; ?>" style="background:#ff80ff; width:100%; height:40px;font-size:2em;"></label>
 
-                                <input id="input_color_purple_light_bateria<?php echo $i; ?>" onclick="CoresBateria()" name="input_color_purple_light_bateria" type="checkbox" hidden>
+                                <input id="input_color_purple_light_bateria<?php echo $i; ?>" class="input_color_purple_light_bateria" onclick="CoresBateria()" name="input_color_purple_light_bateria" type="checkbox" hidden>
 
                             </div>
 
@@ -939,12 +939,10 @@
 
                             <label style="width:100%; font-size:1.4em;" class="white text-center" for="num_cores_bateria">Quantidade de cores selecionadas</label>
                             
-                            <input class="text-center num_cores_bateria" id="num_cores_bateria<?php echo $i; ?>" name="num_cores_bateria">
+                            <input class="text-center num_cores_bateria" hidden id="num_cores_bateria<?php echo $i; ?>" name="num_cores_bateria">
 
                             <h4 class="white qnt_cores_bateria" id="qnt_cores_bateria<?php echo $i; ?>" style="width:6%; margin-left:47%;"></h4>
                             
-                            <h3 class="white Teste"></h3>
-                       
                         </div>
 
                     </div>

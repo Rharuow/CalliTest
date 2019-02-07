@@ -1023,7 +1023,7 @@
     function CoresBateria() {
         
         var input_color_red_black_bateria           =   document.getElementsByClassName("input_color_red_black_bateria");
-      /*  
+        
         var input_color_orange_black_bateria        =   document.getElementsByClassName("input_color_orange_black_bateria");
         
         var input_color_yellow_black_bateria        =   document.getElementsByClassName("input_color_yellow_black_bateria");
@@ -1057,455 +1057,455 @@
         var input_color_blue_light_bateria          =   document.getElementsByClassName("input_color_blue_light_bateria");
         
         var input_color_purple_light_bateria        =   document.getElementsByClassName("input_color_purple_light_bateria");
-        */
+        
         var input_num_cores                         =   document.getElementsByClassName("num_cores_bateria");
         
         var output_num_cores                        =   document.getElementsByClassName("qnt_cores_bateria");
         
-        var coresBateria                            =   Array();
-        
-        var label_red_black_bateria                 =   Array();
-        
-        for (var i = 0; i < input_color_red_black_bateria.length; i++) {
+        var corBateria                         =   Array();    
             
-        coresBateria[i]    =    0;
+        for (var i = 0; i < input_color_red_black_bateria.length; i++) {
         
+            corBateria[i]=0;
+        
+        /*   Cores escuras   */    
+            
         if(input_color_red_black_bateria[i].checked == true) {
             
-            label_red_black_bateria[i] =   document.getElementById("label_red_black_bateria" + i);
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_red_black_bateria[i].className   =   " btn fas fa-check label_red_black_bateria";
+            var label_red_black               =       document.getElementsByClassName("label_red_black_bateria");
             
-            coresBateria[i]++;
+            label_red_black[i].className      =       "btn label_red_black_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
-            
-            var teste   =   document.getElementsByClassName("testeh4");
-            
-            teste.innerHTML =   label_red_black_bateria[i].className;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            label_red_black_bateria[i] =   document.getElementById("label_red_black_bateria" + i);
+            var label_red_black               =       document.getElementsByClassName("label_red_black_bateria");
             
-            label_red_black_bateria[i].className   =   "btn label_red_black_bateria";
+            label_red_black[i].className      =       "btn label_red_black_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
-        /*
+            
         if(input_color_orange_black_bateria[i].checked == true) {
             
-            var label_orange_black_bateria =   document.getElementsByClassName("label_orange_black_bateria");
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_orange_black_bateria[i].className   =   "btn fas fa-check label_orange_black_bateria";
+            var label_orange_black               =       document.getElementsByClassName("label_orange_black_bateria");
             
-            coresBateria[i]++;
+            label_orange_black[i].className      =       "btn label_orange_black_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            var label_orange_black_bateria =   document.getElementsByClassName("label_orange_black_bateria");
+            var label_orange_black               =       document.getElementsByClassName("label_orange_black_bateria");
             
-            label_orange_black_bateria[i].className   =   "btn label_orange_black_bateria";
+            label_orange_black[i].className      =       "btn label_orange_black_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
-        
+            
         if(input_color_yellow_black_bateria[i].checked == true) {
             
-            var label_yellow_black_bateria =   document.getElementsByClassName("label_yellow_black_bateria");
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_yellow_black_bateria[i].className   =   "btn fas fa-check label_yellow_black_bateria";
+            var label_yellow_black_bateria               =       document.getElementsByClassName("label_yellow_black_bateria");
             
-            coresBateria[i]++;
+            label_yellow_black_bateria[i].className      =       "btn label_yellow_black_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            var label_yellow_black_bateria =   document.getElementsByClassName("label_yellow_black_bateria");
+            var label_yellow_black_bateria               =       document.getElementsByClassName("label_yellow_black_bateria");
             
-            label_yellow_black_bateria[i].className   =   "btn label_yellow_black_bateria";
+            label_yellow_black_bateria[i].className      =       "btn label_yellow_black_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
         
         if(input_color_green_black_bateria[i].checked == true) {
             
-            var label_green_black_bateria =   document.getElementsByClassName("label_green_black_bateria");
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_green_black_bateria[i].className   =   "btn fas fa-check label_green_black_bateria";
+            var label_green_black_bateria               =       document.getElementsByClassName("label_green_black_bateria");
             
-            coresBateria[i]++;
+            label_green_black_bateria[i].className      =       "btn label_green_black_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            var label_green_black_bateria =   document.getElementsByClassName("label_green_black_bateria");
+            var label_green_black_bateria               =       document.getElementsByClassName("label_green_black_bateria");
             
-            label_green_black_bateria[i].className   =   "btn label_green_black_bateria";
+            label_green_black_bateria[i].className      =       "btn label_green_black_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
-        
+            
         if(input_color_blue_black_bateria[i].checked == true) {
             
-            var label_blue_black_bateria =   document.getElementsByClassName("label_blue_black_bateria");
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_blue_black_bateria[i].className   =   "btn fas fa-check label_blue_black_bateria";
+            var label_blue_black_bateria               =       document.getElementsByClassName("label_blue_black_bateria");
             
-            coresBateria[i]++;
+            label_blue_black_bateria[i].className      =       "btn label_blue_black_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            var label_blue_black_bateria =   document.getElementsByClassName("label_blue_black_bateria");
+            var label_blue_black_bateria               =       document.getElementsByClassName("label_blue_black_bateria");
             
-            label_blue_black_bateria[i].className   =   "btn label_blue_black_bateria";
+            label_blue_black_bateria[i].className      =       "btn label_blue_black_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
-        
+            
         if(input_color_purple_black_bateria[i].checked == true) {
             
-            var label_purple_black_bateria =   document.getElementsByClassName("label_purple_black_bateria");
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_purple_black_bateria[i].className   =   "btn fas fa-check label_purple_black_bateria";
+            var label_purple_black_bateria               =       document.getElementsByClassName("label_purple_black_bateria");
             
-            coresBateria[i]++;
+            label_purple_black_bateria[i].className      =       "btn label_purple_black_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            var label_purple_black_bateria =   document.getElementsByClassName("label_purple_black_bateria");
+            var label_purple_black_bateria               =       document.getElementsByClassName("label_purple_black_bateria");
             
-            label_purple_black_bateria[i].className   =   "btn label_purple_black_bateria";
+            label_purple_black_bateria[i].className      =       "btn label_purple_black_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
-        
+            
+        /* Cores padrões */
+            
         if(input_color_red_bateria[i].checked == true) {
             
-            var label_red_bateria =   document.getElementsByClassName("label_red_bateria");
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_red_bateria[i].className   =   "btn fas fa-check label_red_bateria";
+            var label_red               =       document.getElementsByClassName("label_red_bateria");
             
-            coresBateria[i]++;
+            label_red[i].className      =       "btn label_red_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            var label_red_bateria =   document.getElementsByClassName("label_red_bateria");
+            var label_red               =       document.getElementsByClassName("label_red_bateria");
             
-            label_red_bateria[i].className   =   "btn label_red_bateria";
+            label_red[i].className      =       "btn label_red_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
-        
+            
         if(input_color_orange_bateria[i].checked == true) {
             
-            var label_orange_bateria =   document.getElementsByClassName("label_orange_bateria");
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_orange_bateria[i].className   =   "btn fas fa-check label_orange_bateria";
+            var label_orange               =       document.getElementsByClassName("label_orange_bateria");
             
-            coresBateria[i]++;
+            label_orange[i].className      =       "btn label_orange_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            var label_orange_bateria =   document.getElementsByClassName("label_orange_bateria");
+            var label_orange               =       document.getElementsByClassName("label_orange_bateria");
             
-            label_orange_bateria[i].className   =   "btn label_orange_bateria";
+            label_orange[i].className      =       "btn label_orange_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
-        
+            
         if(input_color_yellow_bateria[i].checked == true) {
             
-            var label_yellow_bateria =   document.getElementsByClassName("label_yellow_bateria");
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_yellow_bateria[i].className   =   "btn fas fa-check label_yellow_bateria";
+            var label_yellow_bateria               =       document.getElementsByClassName("label_yellow_bateria");
             
-            coresBateria[i]++;
+            label_yellow_bateria[i].className      =       "btn label_yellow_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            var label_yellow_bateria =   document.getElementsByClassName("label_yellow_bateria");
+            var label_yellow_bateria               =       document.getElementsByClassName("label_yellow_bateria");
             
-            label_yellow_bateria[i].className   =   "btn label_yellow_bateria";
+            label_yellow_bateria[i].className      =       "btn label_yellow_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
         
         if(input_color_green_bateria[i].checked == true) {
             
-            var label_green_bateria =   document.getElementsByClassName("label_green_bateria");
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_green_bateria[i].className   =   "btn fas fa-check label_green_bateria";
+            var label_green_bateria               =       document.getElementsByClassName("label_green_bateria");
             
-            coresBateria[i]++;
+            label_green_bateria[i].className      =       "btn label_green_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            var label_green_bateria =   document.getElementsByClassName("label_green_bateria");
+            var label_green_bateria               =       document.getElementsByClassName("label_green_bateria");
             
-            label_green_bateria[i].className   =   "btn label_green_bateria";
+            label_green_bateria[i].className      =       "btn label_green_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
-        
+            
         if(input_color_blue_bateria[i].checked == true) {
             
-            var label_blue_bateria =   document.getElementsByClassName("label_blue_bateria");
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_blue_bateria[i].className   =   "btn fas fa-check label_blue_bateria";
+            var label_blue_bateria               =       document.getElementsByClassName("label_blue_bateria");
             
-            coresBateria[i]++;
+            label_blue_bateria[i].className      =       "btn label_blue_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            var label_blue_bateria =   document.getElementsByClassName("label_blue_bateria");
+            var label_blue_bateria               =       document.getElementsByClassName("label_blue_bateria");
             
-            label_blue_bateria[i].className   =   "btn label_blue_bateria";
+            label_blue_bateria[i].className      =       "btn label_blue_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
-        
+            
         if(input_color_purple_bateria[i].checked == true) {
             
-            var label_purple_bateria =   document.getElementsByClassName("label_purple_bateria");
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_purple_bateria[i].className   =   "btn fas fa-check label_purple_bateria";
+            var label_purple_bateria               =       document.getElementsByClassName("label_purple_bateria");
             
-            coresBateria[i]++;
+            label_purple_bateria[i].className      =       "btn label_purple_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            var label_purple_bateria =   document.getElementsByClassName("label_purple_bateria");
+            var label_purple_bateria               =       document.getElementsByClassName("label_purple_bateria");
             
-            label_purple_bateria[i].className   =   "btn label_purple_bateria";
+            label_purple_bateria[i].className      =       "btn label_purple_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
-        
+           
+        /* Cores Claras */
+            
         if(input_color_red_light_bateria[i].checked == true) {
             
-            var label_red_light_bateria =   document.getElementsByClassName("label_red_light_bateria");
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_red_light_bateria[i].className   =   "btn fas fa-check label_red_light_bateria";
+            var label_red_light               =       document.getElementsByClassName("label_red_light_bateria");
             
-            coresBateria[i]++;
+            label_red_light[i].className      =       "btn label_red_light_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            var label_red_light_bateria =   document.getElementsByClassName("label_red_light_bateria");
+            var label_red_light               =       document.getElementsByClassName("label_red_light_bateria");
             
-            label_red_light_bateria[i].className   =   "btn label_red_light_bateria";
+            label_red_light[i].className      =       "btn label_red_light_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
-        
+            
         if(input_color_orange_light_bateria[i].checked == true) {
             
-            var label_orange_light_bateria =   document.getElementsByClassName("label_orange_light_bateria");
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_orange_light_bateria[i].className   =   "btn fas fa-check label_orange_light_bateria";
+            var label_orange_light               =       document.getElementsByClassName("label_orange_light_bateria");
             
-            coresBateria[i]++;
+            label_orange_light[i].className      =       "btn label_orange_light_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            var label_orange_light_bateria =   document.getElementsByClassName("label_orange_light_bateria");
+            var label_orange_light               =       document.getElementsByClassName("label_orange_light_bateria");
             
-            label_orange_light_bateria[i].className   =   "btn label_orange_light_bateria";
+            label_orange_light[i].className      =       "btn label_orange_light_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
-        
+            
         if(input_color_yellow_light_bateria[i].checked == true) {
             
-            var label_yellow_light_bateria =   document.getElementsByClassName("label_yellow_light_bateria");
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_yellow_light_bateria[i].className   =   "btn fas fa-check label_yellow_light_bateria";
+            var label_yellow_light_bateria               =       document.getElementsByClassName("label_yellow_light_bateria");
             
-            coresBateria[i]++;
+            label_yellow_light_bateria[i].className      =       "btn label_yellow_light_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            var label_yellow_light_bateria =   document.getElementsByClassName("label_yellow_light_bateria");
+            var label_yellow_light_bateria               =       document.getElementsByClassName("label_yellow_light_bateria");
             
-            label_yellow_light_bateria[i].className   =   "btn label_yellow_light_bateria";
+            label_yellow_light_bateria[i].className      =       "btn label_yellow_light_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
         
         if(input_color_green_light_bateria[i].checked == true) {
             
-            var label_green_light_bateria =   document.getElementsByClassName("label_green_light_bateria");
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_green_light_bateria[i].className   =   "btn fas fa-check label_green_light_bateria";
+            var label_green_light_bateria               =       document.getElementsByClassName("label_green_light_bateria");
             
-            coresBateria[i]++;
+            label_green_light_bateria[i].className      =       "btn label_green_light_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            var label_green_light_bateria =   document.getElementsByClassName("label_green_light_bateria");
+            var label_green_light_bateria               =       document.getElementsByClassName("label_green_light_bateria");
             
-            label_green_light_bateria[i].className   =   "btn label_green_light_bateria";
+            label_green_light_bateria[i].className      =       "btn label_green_light_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
-        
+            
         if(input_color_blue_light_bateria[i].checked == true) {
             
-            var label_blue_light_bateria =   document.getElementsByClassName("label_blue_light_bateria");
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_blue_light_bateria[i].className   =   "btn fas fa-check label_blue_light_bateria";
+            var label_blue_light_bateria               =       document.getElementsByClassName("label_blue_light_bateria");
             
-            coresBateria[i]++;
+            label_blue_light_bateria[i].className      =       "btn label_blue_light_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            var label_blue_light_bateria =   document.getElementsByClassName("label_blue_light_bateria");
+            var label_blue_light_bateria               =       document.getElementsByClassName("label_blue_light_bateria");
             
-            label_blue_light_bateria[i].className   =   "btn label_blue_light_bateria";
+            label_blue_light_bateria[i].className      =       "btn label_blue_light_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
-        
+            
         if(input_color_purple_light_bateria[i].checked == true) {
             
-            var label_purple_light_bateria =   document.getElementsByClassName("label_purple_light_bateria");
+            corBateria[i]++;
+        
+            input_num_cores[i].value = corBateria[i];
             
-            label_purple_light_bateria[i].className   =   "btn fas fa-check label_purple_light_bateria";
+            var label_purple_light_bateria               =       document.getElementsByClassName("label_purple_light_bateria");
             
-            coresBateria[i]++;
+            label_purple_light_bateria[i].className      =       "btn label_purple_light_bateria fas fa-check";
             
-            input_num_cores[i].value     =       coresBateria[i];
-            
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         } else {
             
-            var label_purple_light_bateria =   document.getElementsByClassName("label_purple_light_bateria");
+            var label_purple_light_bateria               =       document.getElementsByClassName("label_purple_light_bateria");
             
-            label_purple_light_bateria[i].className   =   "btn label_purple_light_bateria";
+            label_purple_light_bateria[i].className      =       "btn label_purple_light_bateria";
             
-            input_num_cores[i].value     =       coresBateria[i];
+            input_num_cores[i].value = corBateria[i];
             
-            output_num_cores[i].innerHTML=       input_num_cores[i].value;
+            output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
-        */
+            
         }
         
     }
