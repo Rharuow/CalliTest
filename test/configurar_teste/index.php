@@ -212,7 +212,13 @@
                
                 <!-- definir formas e cores para o treinamneto -->        
                 <?php if($get_treinamento_status == 1) { ?>
-                      <input hidden id="tipoTreinamento" value="<?php echo $tre_tipo ?>">
+                     
+                    <input id="treinamentoStatus" value="<?php echo $get_treinamento_status; ?>"> 
+                     
+                    <input id="tipoTreinamento" value="<?php echo $tre_tipo ?>">
+                     
+                    <h1 class="white" id="test"></h1>
+                      
                     <?php if($tre_tipo == "forma" or $tre_tipo  == "forma e cor") { ?>  
                         
                         <div class="row">
@@ -593,6 +599,8 @@
                                        
                         <input id="ordemBateria" hidden value="<?php echo $i; ?>">               
                                         
+                        <input class="tipoBateria" value="<?php echo $bat_tipo[$i];?>">
+                                        
                 <?php if($bat_tipo[$i] == "forma" || $bat_tipo[$i]  == "forma e cor") { ?>
                        
                         <h4 class="well text-center" onload="selectedFormsBateria()">Bateria <?php echo $num = $i + 1; ?> </h4>
@@ -958,7 +966,7 @@
                            
                                 <input name="testeID" hidden id="testeID" value="<?php echo $testeID; ?>">
                                
-                                <button id="send_button" type="submit" class="btn btn-success btn-lg" style="width:50%; margin-left:25%;" formaction="index.php">Continuar</button>
+                                <button id="send_button" disabled type="submit" class="btn btn-success btn-lg" style="width:50%; margin-left:25%;" formaction="index.php">Continuar</button>
                            
                             </div>
 

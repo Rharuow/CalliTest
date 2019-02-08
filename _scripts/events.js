@@ -48,6 +48,39 @@
 
     /* Página de configuração de teste selecionado */
 
+    var globalNumParametrosTreinamentoForma = false;
+
+    var globalNumParametrosTreinamentoCor = false;
+
+    var globalNumParametrosBateriaForma = false;
+
+    var globalNumParametrosBateriaCor = false;
+
+    function active() {
+     
+        var treinamentoStatus   =   document.getElementById("treinamentoStatus").value;
+        
+        if (treinamentoStatus == 1) {
+            
+        var tipoTreinamento     =   document.getElementById("tipoTreinamento").value;
+     
+        var tipoBateria         =   document.getElementsByClassName("tipoBateria").value;
+        
+        document.getElementById("test").innerHTML = tipoBateria.length;
+            
+            
+        } else {
+        
+        var tipoBateria         =   document.getElementsByClassName("tipoBateria").value;
+        
+            for (var i = 0; i < tipoBateria.length; i++) {
+
+            }
+            
+        }
+        
+    }
+
     /* Treinamento */
 
     function selectedFormsTreinamento() {
@@ -259,6 +292,18 @@
         }
         
         outputNumFormasTreinamento.innerHTML    =   numFormasTreinamento.value;
+        
+        if(numFormasTreinamento.value < 3) {
+            
+            globalNumParametrosTreinamentoForma =   false;
+            
+        } else {
+            
+            globalNumParametrosTreinamentoForma =   true;
+            
+        }
+     
+        active();
         
     }
 
@@ -738,6 +783,18 @@
             
         }
         
+        if(input_num_cores.value < 3) {
+            
+            globalNumParametrosTreinamentoCor = false;
+            
+        } else {
+            
+            globalNumParametrosTreinamentoCor = true;
+            
+        }
+        
+        active();
+        
     }
 
     /* Bateria */
@@ -772,6 +829,8 @@
     
         var formaBateria                         =   Array();
         
+        var bateriaValidade                      =   0;
+                
         for(var i = 0; i < input_forma_quadrado_bateria.length; i++) {
         
             formaBateria[i]=0;
@@ -1015,8 +1074,30 @@
                 label_cruz_bateria[i].style.color   =   "white";
                 
             }
+        
+            if(num_formas_bateria[i].value >= 3) {
+                
+                bateriaValidade++;
+                
+            } else {
+                
+                bateriaValidade = bateriaValidade;
+                
+            }
             
         }
+        
+        if (bateriaValidade == input_forma_circulo_bateria.length) {
+        
+            globalNumParametrosBateriaForma =   true;
+            
+        } else {
+            
+            globalNumParametrosBateriaForma =   false;
+            
+        }
+        
+        active();
         
     }
 
@@ -1062,8 +1143,10 @@
         
         var output_num_cores                        =   document.getElementsByClassName("qnt_cores_bateria");
         
-        var corBateria                         =   Array();    
-            
+        var corBateria                              =   Array();    
+         
+        var bateriaValidade                         =   0;
+        
         for (var i = 0; i < input_color_red_black_bateria.length; i++) {
         
             corBateria[i]=0;
@@ -1505,7 +1588,30 @@
             output_num_cores[i].innerHTML     =       corBateria[i];
             
         }
+ 
+        if(input_num_cores[i].value >= 3) {
+            
+            bateriaValidade++;
+        
+        } else {
+            
+            bateriaValidade = bateriaValidade;
+            
+        }
             
         }
         
+        if(bateriaValidade == input_color_blue_bateria.length) {
+            
+            globalNumParametrosBateriaCor = true;
+            
+        } else {
+            
+            globalNumParametrosBateriaCor = false;
+            
+        }
+        
+        active();
+        
     }
+    
