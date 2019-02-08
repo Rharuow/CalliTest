@@ -48,37 +48,23 @@
 
     /* Página de configuração de teste selecionado */
 
+    /* Variáveis globais para ativar o botão send */
+
     var globalNumParametrosTreinamentoForma = false;
 
-    var globalNumParametrosTreinamentoCor = false;
+    var globalNumParametrosTreinamentoCor   = false;
 
-    var globalNumParametrosBateriaForma = false;
+    var globalNumParametrosBateriaForma     = false;
 
-    var globalNumParametrosBateriaCor = false;
+    var globalNumParametrosBateriaCor       = false;
 
-    function active() {
-     
-        var treinamentoStatus   =   document.getElementById("treinamentoStatus").value;
-        
-        if (treinamentoStatus == 1) {
-            
-        var tipoTreinamento     =   document.getElementById("tipoTreinamento").value;
-     
-        var tipoBateria         =   document.getElementsByClassName("tipoBateria").value;
-        
-        document.getElementById("test").innerHTML = tipoBateria.length;
-            
-            
-        } else {
-        
-        var tipoBateria         =   document.getElementsByClassName("tipoBateria").value;
-        
-            for (var i = 0; i < tipoBateria.length; i++) {
+    var globalStatusTreinamento             = document.getElementById("status_treinamento").value;
 
-            }
-            
-        }
-        
+    /* Função para ativar o botão send */
+
+    function active(tipoTeste, statusTreinamento) {
+
+
     }
 
     /* Treinamento */
@@ -123,7 +109,7 @@
         
             outputNumFormasTreinamento.innerHTML    =   numFormasTreinamento.value;
             
-            document.getElementById("label_quadrado").style.color =   "green";    
+            document.getElementById("label_quadrado").style.color =   "#00ff00";    
             
         } else {
             
@@ -140,7 +126,7 @@
             
             numFormasTreinamento.value    =   formaTreinamento;
         
-            document.getElementById("label_losango").style.color =   "green";    
+            document.getElementById("label_losango").style.color =   "#00ff00";    
             
         } else {
             
@@ -155,7 +141,7 @@
             
             numFormasTreinamento.value    =   formaTreinamento;
         
-            document.getElementById("label_triangle_up").style =   "border-bottom: 100px solid #009933";    
+            document.getElementById("label_triangle_up").style =   "border-bottom: 100px solid #00ff00";    
             
         } else {
             
@@ -170,7 +156,7 @@
             
             numFormasTreinamento.value    =   formaTreinamento;
         
-            document.getElementById("label_circle").style.backgroundColor =   "green";    
+            document.getElementById("label_circle").style.backgroundColor =   "#00ff00";    
             
         } else {
             
@@ -185,7 +171,7 @@
             
             numFormasTreinamento.value    =   formaTreinamento;
         
-            document.getElementById("label_trapezoid").style =   "border-bottom: 75px solid #009933";    
+            document.getElementById("label_trapezoid").style =   "border-bottom: 75px solid #00ff00";    
         } else {
             
             numFormasTreinamento.value    =   formaTreinamento;
@@ -199,7 +185,7 @@
             
             numFormasTreinamento.value    =   formaTreinamento;
         
-            document.getElementById("label_triangle_down").style =   "border-top: 100px solid #009933";    
+            document.getElementById("label_triangle_down").style =   "border-top: 100px solid #00ff00";    
         } else {
             
             numFormasTreinamento.value    =   formaTreinamento;
@@ -213,7 +199,7 @@
             
             numFormasTreinamento.value    =   formaTreinamento;
         
-            document.getElementById("label_triangle_left").style =   "border-right: 100px solid #009933";    
+            document.getElementById("label_triangle_left").style =   "border-right: 100px solid #00ff00";    
         } else {
             
             numFormasTreinamento.value    =   formaTreinamento;
@@ -227,7 +213,7 @@
             
             numFormasTreinamento.value    =   formaTreinamento;
         
-            document.getElementById("label_triangle_right").style =   "border-left: 100px solid #009933";    
+            document.getElementById("label_triangle_right").style =   "border-left: 100px solid #00ff00";    
         } else {
             
             numFormasTreinamento.value    =   formaTreinamento;
@@ -241,7 +227,7 @@
             
             numFormasTreinamento.value    =   formaTreinamento;
         
-            document.getElementById("label_rectangle").style.backgroundColor =   "#009933";    
+            document.getElementById("label_rectangle").style.backgroundColor =   "#00ff00";    
         } else {
             
             numFormasTreinamento.value    =   formaTreinamento;
@@ -255,7 +241,7 @@
             
             numFormasTreinamento.value    =   formaTreinamento;
         
-            document.getElementById("label_estrela").style.color =   "#009933";    
+            document.getElementById("label_estrela").style.color =   "#00ff00";    
         } else {
             
             numFormasTreinamento.value    =   formaTreinamento;
@@ -269,7 +255,7 @@
             
             numFormasTreinamento.value    =   formaTreinamento;
         
-            document.getElementById("label_estrela2").style.color =   "#009933";    
+            document.getElementById("label_estrela2").style.color =   "#00ff00";    
         } else {
             
             numFormasTreinamento.value    =   formaTreinamento;
@@ -283,7 +269,7 @@
             
             numFormasTreinamento.value    =   formaTreinamento;
         
-            document.getElementById("label_cruz").style.color =   "#009933";    
+            document.getElementById("label_cruz").style.color =   "#00ff00";    
         } else {
             
             numFormasTreinamento.value    =   formaTreinamento;
@@ -303,7 +289,9 @@
             
         }
      
-        active();
+        var treinamentoTipo     =       document.getElementById("tipoTreinamento").value;
+        
+        active(treinamentoTipo, globalStatusTreinamento);
         
     }
 
@@ -793,7 +781,9 @@
             
         }
         
-        active();
+        var treinamentoTipo     =       document.getElementById("tipoTreinamento").value;
+        
+        active(treinamentoTipo, globalStatusTreinamento);
         
     }
 
@@ -825,8 +815,10 @@
         
         var input_forma_cruz_bateria             =   document.getElementsByClassName("input_forma_cruz_bateria");
         
-        var num_formas_bateria                   =   document.getElementsByClassName("num_formas_bateria");
+        var input_num_formas_bateria             =   document.getElementsByClassName("num_formas_bateria");
     
+        var output_num_formas_bateria            =   document.getElementsByClassName("output_qnt_bateria");
+        
         var formaBateria                         =   Array();
         
         var bateriaValidade                      =   0;
@@ -839,15 +831,19 @@
         
                 formaBateria[i]++;
                 
-                num_formas_bateria[i].value =   formaBateria[i];   
+                input_num_formas_bateria[i].value =   formaBateria[i];   
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_quadrado_bateria  =   document.getElementsByClassName("label_quadrado_bateria");
                 
-                label_quadrado_bateria[i].style.color   =   "green";
+                label_quadrado_bateria[i].style.color   =   "#00ff00";
                 
             } else {
                 
-                num_formas_bateria[i].value =   formaBateria[i];
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_quadrado_bateria  =   document.getElementsByClassName("label_quadrado_bateria");
                 
@@ -859,15 +855,19 @@
         
                 formaBateria[i]++;
                 
-                num_formas_bateria[i].value =   formaBateria[i];    
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_losango_bateria  =   document.getElementsByClassName("label_losango_bateria");
                 
-                label_losango_bateria[i].style.color   =   "green";
+                label_losango_bateria[i].style.color   =   "#00ff00";
                 
             } else {
                 
-                num_formas_bateria[i].value =   formaBateria[i];
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_losango_bateria  =   document.getElementsByClassName("label_losango_bateria");
                 
@@ -879,15 +879,19 @@
         
                 formaBateria[i]++;
                 
-                num_formas_bateria[i].value =   formaBateria[i];    
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_triangle_up_bateria  =   document.getElementsByClassName("label_triangle_up_bateria");
                 
-                label_triangle_up_bateria[i].style =   "border-bottom: 100px solid #009933";
+                label_triangle_up_bateria[i].style =   "border-bottom: 100px solid #00ff00";
                 
             } else {
                 
-                num_formas_bateria[i].value =   formaBateria[i];
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_triangle_up_bateria  =   document.getElementsByClassName("label_triangle_up_bateria");
                 
@@ -899,15 +903,19 @@
         
                 formaBateria[i]++;
                 
-                num_formas_bateria[i].value =   formaBateria[i];    
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_circle_bateria  =   document.getElementsByClassName("label_circle_bateria");
                 
-                label_circle_bateria[i].style.backgroundColor   =   "green";
+                label_circle_bateria[i].style.backgroundColor   =   "#00ff00";
                 
             } else {
                 
-                num_formas_bateria[i].value =   formaBateria[i];
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_circle_bateria  =   document.getElementsByClassName("label_circle_bateria");
                 
@@ -919,15 +927,19 @@
         
                 formaBateria[i]++;
                 
-                num_formas_bateria[i].value =   formaBateria[i];    
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_trapezoid_bateria  =   document.getElementsByClassName("label_trapezoid_bateria");
                 
-                label_trapezoid_bateria[i].style    =   "border-bottom: 75px solid #009933";    
+                label_trapezoid_bateria[i].style    =   "border-bottom: 75px solid #00ff00";    
                 
             } else {
                 
-                num_formas_bateria[i].value =   formaBateria[i];
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_trapezoid_bateria  =   document.getElementsByClassName("label_trapezoid_bateria");
                 
@@ -939,15 +951,19 @@
         
                 formaBateria[i]++;
                 
-                num_formas_bateria[i].value =   formaBateria[i];    
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_triangle_down_bateria  =   document.getElementsByClassName("label_triangle_down_bateria");
                 
-                label_triangle_down_bateria[i].style =   "border-top: 100px solid #009933";     
+                label_triangle_down_bateria[i].style =   "border-top: 100px solid #00ff00";     
                 
             } else {
                 
-                num_formas_bateria[i].value =   formaBateria[i];
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_triangle_down_bateria  =   document.getElementsByClassName("label_triangle_down_bateria");
                 
@@ -959,15 +975,19 @@
         
                 formaBateria[i]++;
                 
-                num_formas_bateria[i].value =   formaBateria[i];    
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_triangle_left_bateria  =   document.getElementsByClassName("label_triangle_left_bateria");
                 
-                label_triangle_left_bateria[i].style =   "border-right: 100px solid #009933";     
+                label_triangle_left_bateria[i].style =   "border-right: 100px solid #00ff00";     
                 
             } else {
                 
-                num_formas_bateria[i].value =   formaBateria[i];
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_triangle_left_bateria  =   document.getElementsByClassName("label_triangle_left_bateria");
                 
@@ -979,15 +999,19 @@
         
                 formaBateria[i]++;
                 
-                num_formas_bateria[i].value =   formaBateria[i];    
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_triangle_right_bateria  =   document.getElementsByClassName("label_triangle_right_bateria");
                 
-                label_triangle_right_bateria[i].style =   "border-left: 100px solid #009933";    
+                label_triangle_right_bateria[i].style =   "border-left: 100px solid #00ff00";    
                 
             } else {
                 
-                num_formas_bateria[i].value =   formaBateria[i];
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_triangle_right_bateria  =   document.getElementsByClassName("label_triangle_right_bateria");
                 
@@ -999,15 +1023,19 @@
         
                 formaBateria[i]++;
                 
-                num_formas_bateria[i].value =   formaBateria[i];    
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_rectangle_bateria  =   document.getElementsByClassName("label_rectangle_bateria");
                 
-                label_rectangle_bateria[i].style.backgroundColor =   "#009933";
+                label_rectangle_bateria[i].style.backgroundColor =   "#00ff00";
                 
             } else {
                 
-                num_formas_bateria[i].value =   formaBateria[i];
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_rectangle_bateria  =   document.getElementsByClassName("label_rectangle_bateria");
                 
@@ -1019,15 +1047,19 @@
         
                 formaBateria[i]++;
                 
-                num_formas_bateria[i].value =   formaBateria[i];   
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_estrela_bateria  =   document.getElementsByClassName("label_estrela_bateria");
                 
-                label_estrela_bateria[i].style.color   =   "green";
+                label_estrela_bateria[i].style.color   =   "#00ff00";
                 
             } else {
                 
-                num_formas_bateria[i].value =   formaBateria[i];
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_estrela_bateria  =   document.getElementsByClassName("label_estrela_bateria");
                 
@@ -1039,15 +1071,19 @@
         
                 formaBateria[i]++;
                 
-                num_formas_bateria[i].value =   formaBateria[i];   
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_estrela2_bateria  =   document.getElementsByClassName("label_estrela2_bateria");
                 
-                label_estrela2_bateria[i].style.color   =   "green";
+                label_estrela2_bateria[i].style.color   =   "#00ff00";
                 
             } else {
                 
-                num_formas_bateria[i].value =   formaBateria[i];
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_estrela2_bateria  =   document.getElementsByClassName("label_estrela2_bateria");
                 
@@ -1059,15 +1095,19 @@
         
                 formaBateria[i]++;
                 
-                num_formas_bateria[i].value =   formaBateria[i];   
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_cruz_bateria  =   document.getElementsByClassName("label_cruz_bateria");
                 
-                label_cruz_bateria[i].style.color   =   "green";
+                label_cruz_bateria[i].style.color   =   "#00ff00";
                 
             } else {
                 
-                num_formas_bateria[i].value =   formaBateria[i];
+                input_num_formas_bateria[i].value =   formaBateria[i];
+                
+                output_num_formas_bateria[i].innerHTML  =   input_num_formas_bateria[i].value;
                 
                 var label_cruz_bateria  =   document.getElementsByClassName("label_cruz_bateria");
                 
@@ -1075,7 +1115,7 @@
                 
             }
         
-            if(num_formas_bateria[i].value >= 3) {
+            if(input_num_formas_bateria[i].value >= 3) {
                 
                 bateriaValidade++;
                 
@@ -1084,20 +1124,23 @@
                 bateriaValidade = bateriaValidade;
                 
             }
-            
+        
+            if (bateriaValidade == input_forma_circulo_bateria.length) {
+
+                globalNumParametrosBateriaForma =   true;
+
+            } else {
+
+                globalNumParametrosBateriaForma =   false;
+
+            }
+
+            var bateriaTipo     =       document.getElementsByClassName("tipoTreinamento");
+
+            active(bateriaTipo[i].value, globalStatusTreinamento);
+
         }
         
-        if (bateriaValidade == input_forma_circulo_bateria.length) {
-        
-            globalNumParametrosBateriaForma =   true;
-            
-        } else {
-            
-            globalNumParametrosBateriaForma =   false;
-            
-        }
-        
-        active();
         
     }
 
@@ -1598,8 +1641,6 @@
             bateriaValidade = bateriaValidade;
             
         }
-            
-        }
         
         if(bateriaValidade == input_color_blue_bateria.length) {
             
@@ -1609,9 +1650,13 @@
             
             globalNumParametrosBateriaCor = false;
             
+        }    
+            
+        var bateriaTipo     =       document.getElementsByClassName("tipoTreinamento");
+
+        active(bateriaTipo[i].value, globalStatusTreinamento);    
+            
         }
         
-        active();
-        
     }
-    
+      

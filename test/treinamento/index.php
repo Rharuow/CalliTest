@@ -180,8 +180,6 @@
             
         </div>
         
-        <div class="container mt-5">
-           
             <div class="row mt-5 mb-5">
                
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
@@ -198,7 +196,7 @@
 
                         <input type="number" id="pesquisa_ID" name="pesquisa_ID" value="<?php echo $pesquisaID; ?>" hidden>
 
-                        <button name="cancel" id="cancel" type="submit" style="width:20%; margin-left:40%;" class="btn btn-danger btn-lg">Cancelar</button>
+                        <button name="cancel" id="cancel" style="width:20%; margin-left:40%;" class="btn btn-danger btn-lg">Cancelar</button>
 
                     </form>
                     

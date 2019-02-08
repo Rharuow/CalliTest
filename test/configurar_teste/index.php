@@ -212,13 +212,7 @@
                
                 <!-- definir formas e cores para o treinamneto -->        
                 <?php if($get_treinamento_status == 1) { ?>
-                     
-                    <input id="treinamentoStatus" value="<?php echo $get_treinamento_status; ?>"> 
-                     
-                    <input id="tipoTreinamento" value="<?php echo $tre_tipo ?>">
-                     
-                    <h1 class="white" id="test"></h1>
-                      
+                                
                     <?php if($tre_tipo == "forma" or $tre_tipo  == "forma e cor") { ?>  
                         
                         <div class="row">
@@ -384,8 +378,6 @@
                             </div>
                     
                         </div>
-                   
-
 
                 <?php } ?>
 
@@ -591,6 +583,19 @@
 
                 <?php } ?>
 
+                       <div class="row mt-5 mb-5">
+                           
+                           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"></div>
+                           
+                           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                               
+                               <button class="btn btn-lg btn-success" id="button_save_treinamento" style="width:30%; margin-left:35%;" disabled>Salvar</button>
+                               
+                           </div>
+                           
+                       </div>
+               
+               
                 <?php } ?>       
                 
                 <?php for($i=0;$i<$get_num_baterias;$i++) { ?>        
@@ -598,8 +603,6 @@
                         <input id="qntBateria" hidden value="<?php echo $get_num_baterias; ?>">
                                        
                         <input id="ordemBateria" hidden value="<?php echo $i; ?>">               
-                                        
-                        <input class="tipoBateria" value="<?php echo $bat_tipo[$i];?>">
                                         
                 <?php if($bat_tipo[$i] == "forma" || $bat_tipo[$i]  == "forma e cor") { ?>
                        
@@ -751,7 +754,7 @@
 
                                 <label style="width:100%; font-size:1.4em;" class="white text-center" for="num_formas_bateria<?php echo $i; ?>">Quantidade de formas selecionadas</label>
                                 
-                                <input type="number" class="text-center num_formas_bateria" min="1" id="num_formas_bateria<?php echo $i; ?>" name="num_formas_bateria<?php echo $i; ?>" readonly style="width:auto;">
+                                <input type="number" class="text-center num_formas_bateria" min="1" id="num_formas_bateria<?php echo $i; ?>" name="num_formas_bateria<?php echo $i; ?>" readonly hidden style="width:auto;">
                                 
                                 <h4 class="white output_qnt_bateria"></h4>
                    
@@ -957,12 +960,24 @@
 
                 <?php } ?>
     
+                   <div class="row mt-5 mb-5">
+                           
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"></div>
+                           
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                               
+                            <button class="btn btn-lg btn-success button_save_bateria" style="width:30%; margin-left:35%;" disabled>Salvar</button>
+                               
+                        </div>
+                           
+                    </div>
+               
                 <?php } ?>  
                     <div class="container mb-5">
                   
                         <div class="row">
                      
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                            
                                 <input name="testeID" hidden id="testeID" value="<?php echo $testeID; ?>">
                                
@@ -970,7 +985,7 @@
                            
                             </div>
 
-                           <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                            
                                 <button type="submit" class="btn btn-danger btn-lg" style="margin-left:25%; width:50%;" formaction="../historic_test/">Voltar</button>
                            
