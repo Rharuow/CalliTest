@@ -15,6 +15,7 @@
   <body>
     <?php include_once 'components/nav.php'; ?>
     <?php include_once 'components/carousel.php'; ?>
+    <?php include_once 'components/timeline.php'; ?>
     <?php include_once 'components/footer.php'; ?>
   </body>
 </html>
