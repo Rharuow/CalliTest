@@ -18,6 +18,7 @@
   </head>
   <body>
     <?php include_once 'components/nav.php'; ?>
+    <?php include_once 'components/carousel.php'; ?>
 
     <!-- <div class="container">
         <div class="row">
