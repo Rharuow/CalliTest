@@ -26,8 +26,8 @@
     width: 100%;
     background-color: #ffffff;
     user-select: none;
-    -webkit-animation: fade 1.5s ease 0s 1 normal;
-    animation: fade 1.5s ease 0s 1 normal;
+    -webkit-animation: fade 1.5s ease-in 0s 1 normal;
+    animation: fade 1.5s ease-in 0s 1 normal;
   }
 
   .controls {
@@ -70,7 +70,7 @@
 
   .caption {
     position: absolute;
-    top: 43%;
+    top: 42%;
     left: 50%;
     text-align: center;
     color: #fff;
@@ -81,6 +81,7 @@
 
   .caption h4 {
     font-size: 1.8rem;
+    margin-bottom: 1.2rem;
   }
 
   .caption p {
@@ -88,12 +89,12 @@
   }
 
   @-webkit-keyframes fade {
-    from {opacity: 0} 
+    from {opacity: 0.4} 
     to {opacity: 1}
   }
 
   @keyframes fade {
-    from {opacity: 0} 
+    from {opacity: 0.4} 
     to {opacity: 1}
   }
 </style>
@@ -107,28 +108,28 @@
   <div class="carousel-items">
     <div class="carousel-item">
       <img class="slide-image" src="telas/slide01.png" alt="">
-      <div class="caption" id="caption-">
+      <div class="caption">
         <h4>AAAAAAAAAAAAAAAAAAAAAAAAAA</h4>
         <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
       </div>
     </div>
     <div class="carousel-item">
       <img class="slide-image" src="telas/slide01.png" alt="">
-      <div class="caption" id="caption-">
+      <div class="caption">
         <h4>BBBBBBBBBBBBBBBBBBBBBBBBBB</h4>
         <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
       </div>
     </div>
     <div class="carousel-item">
       <img class="slide-image" src="telas/slide01.png" alt="">
-      <div class="caption" id="caption-">
+      <div class="caption">
         <h4>CCCCCCCCCCCCCCCCCCCCCCCCCCC</h4>
         <p>ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc</p>
       </div>
     </div>
     <div class="carousel-item">
       <img class="slide-image" src="telas/slide01.png" alt="">
-      <div class="caption" id="caption-">
+      <div class="caption">
         <h4>DDDDDDDDDDDDDDDDDDDDDD</h4>
         <p>dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
       </div>
@@ -142,7 +143,6 @@
       next = document.querySelector('.next'),
       slides = document.querySelectorAll(".carousel-item"),
       slidesLength = slides.length;
-  
   showSlide();
 
   prev.addEventListener('click', function(event) {
@@ -163,10 +163,10 @@
 
     Array.from(slides).forEach(function(slide) {
       slide.style.display = "none";
-      console.log(slide)
     });
 
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlide, 2000);
+    slideIndex++;
+    setTimeout(showSlide, 5000);
   }
 </script>
