@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CalliText - apresentação</title>
+    <title>CalliText - cadastro</title>
     <meta charset="UTF-8">
     <meta name="description" content="website to make tests in Callithrix's behavior">
     <meta name="keywords" content="CalliTest, UFRN, Pesquisa, callithrix">
@@ -13,9 +13,6 @@
     <link rel="stylesheet" href="_css/style.css"/>
   </head>
   <body>
-    <?php include_once 'components/nav.php'; ?>
-    <?php include_once 'components/carousel.php'; ?>
-    <?php include_once 'components/timeline.php'; ?>
-    <?php include_once 'components/footer.php'; ?>
+    <?php include_once 'components/login-form.php'; ?>
   </body>
 </html>
