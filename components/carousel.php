@@ -107,28 +107,28 @@
 
   <div class="carousel-items">
     <div class="carousel-item">
-      <img class="slide-image" src="telas/slide01.png" alt="">
+      <img class="slide-image" src="interface/background.jpg" alt="">
       <div class="caption">
         <h4>AAAAAAAAAAAAAAAAAAAAAAAAAA</h4>
         <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img class="slide-image" src="telas/slide01.png" alt="">
+      <img class="slide-image" src="interface/background.jpg" alt="">
       <div class="caption">
         <h4>BBBBBBBBBBBBBBBBBBBBBBBBBB</h4>
         <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img class="slide-image" src="telas/slide01.png" alt="">
+      <img class="slide-image" src="interface/background.jpg" alt="">
       <div class="caption">
         <h4>CCCCCCCCCCCCCCCCCCCCCCCCCCC</h4>
         <p>ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img class="slide-image" src="telas/slide01.png" alt="">
+      <img class="slide-image" src="interface/background.jpg" alt="">
       <div class="caption">
         <h4>DDDDDDDDDDDDDDDDDDDDDD</h4>
         <p>dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
