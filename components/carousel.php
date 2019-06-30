@@ -55,17 +55,25 @@
   }
 
   .prev, .next {
+    position: relative;
     background-color: #fff;
     border-radius: 50%;
     padding: 15px 20px;
     color: #000;
     transition: 0.6s ease;
     box-shadow: 0 0 6px #000;
+    cursor: pointer;
   }
  
   .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
     color: #fff;
+  }
+
+  .prev:hover, .next:hover,
+  .prev:active, .next:active,
+  .prev:focus, .next:focus {
+    outline: 0;
   }
 
   .caption {
@@ -101,34 +109,34 @@
 
 <div class="carousel">
   <div class="controls">
-    <a href="" class="prev">A</a> <!-- icone-anterior -->
-    <a href="" class="next">P</a> <!-- icone-próximo -->
+    <a href="#" class="prev">A</a> <!-- icone-anterior -->
+    <a href="#" class="next">P</a> <!-- icone-próximo -->
   </div>
 
   <div class="carousel-items">
     <div class="carousel-item">
-      <img class="slide-image" src="telas/slide01.png" alt="">
+      <img class="slide-image" src="interface/background.jpg" alt="">
       <div class="caption">
         <h4>AAAAAAAAAAAAAAAAAAAAAAAAAA</h4>
         <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img class="slide-image" src="telas/slide01.png" alt="">
+      <img class="slide-image" src="interface/background.jpg" alt="">
       <div class="caption">
         <h4>BBBBBBBBBBBBBBBBBBBBBBBBBB</h4>
         <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img class="slide-image" src="telas/slide01.png" alt="">
+      <img class="slide-image" src="interface/background.jpg" alt="">
       <div class="caption">
         <h4>CCCCCCCCCCCCCCCCCCCCCCCCCCC</h4>
         <p>ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img class="slide-image" src="telas/slide01.png" alt="">
+      <img class="slide-image" src="interface/background.jpg" alt="">
       <div class="caption">
         <h4>DDDDDDDDDDDDDDDDDDDDDD</h4>
         <p>dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
@@ -138,7 +146,7 @@
 </div>
 
 <script>
-  var slideIndex = 1,
+  var slideIndex = 0,
       prev = document.querySelector('.prev'),
       next = document.querySelector('.next'),
       slides = document.querySelectorAll(".carousel-item"),
@@ -146,27 +154,28 @@
   showSlide();
 
   prev.addEventListener('click', function(event) {
+    clearTimeout(window.t);
     event.preventDefault();
-    slideIndex--;
+    slideIndex -= 2;
     showSlide();
   }, false);
 
   next.addEventListener('click', function(event) {
+    clearTimeout(window.t);
     event.preventDefault();
-    slideIndex++;
     showSlide();
   }, false);
 
   function showSlide() {
-    if (slideIndex > slidesLength) slideIndex = 1
-    else if (slideIndex < 1) slideIndex = slidesLength
+    if (slideIndex > slidesLength-1) slideIndex = 0
+    else if (slideIndex < 0) slideIndex = slidesLength-1;
 
     Array.from(slides).forEach(function(slide) {
       slide.style.display = "none";
     });
 
-    slides[slideIndex - 1].style.display = "block";
+    slides[slideIndex].style.display = "block";
     slideIndex++;
-    setTimeout(showSlide, 5000);
+    window.t = setTimeout(showSlide, 5000);
   }
 </script>
