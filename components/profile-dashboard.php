@@ -2,12 +2,13 @@
   .profile-dashboard {
     overflow: auto;
     padding: 20px 40px;
-    width: 100%;
+    width: 80%;
   }
 
   .profile-dashboard h2 {
     font-size: 2rem;
     margin-bottom: 1.3rem;
+    color: #666;
   }
 
   .profile-dashboard .researches,

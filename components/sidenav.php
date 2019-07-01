@@ -1,6 +1,6 @@
 <style>
   .sidenav {
-    width: 25vw;
+    width: 20%;
     height: 100vh;
     box-shadow: -2px 0 10px #000;
     display: flex;

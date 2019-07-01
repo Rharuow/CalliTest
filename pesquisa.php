@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CalliText - dashboard</title>
+    <title>CalliText - pesquisa</title>
     <meta charset="UTF-8">
     <meta name="description" content="website to make tests in Callithrix's behavior">
     <meta name="keywords" content="CalliTest, UFRN, Pesquisa, callithrix">
@@ -15,7 +15,7 @@
   <body>
     <main class="flex">
       <?php include_once 'components/sidenav.php'; ?>
-      <?php include_once 'components/profile-dashboard.php'; ?>
+      <?php include_once 'components/research-dashboard.php'; ?>
     </main>
   </body>
 </html>
