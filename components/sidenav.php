@@ -22,9 +22,9 @@
   .sidenav header .researcher img {
     border-radius: 50%;
     min-width: 45px;
-    max-width: 45px;
+    max-width: 60px;
     min-height: 45px;
-    max-height: 45px;
+    max-height: 60px;
     margin-bottom: 1rem;
     object-fit: cover;
     object-position: center;

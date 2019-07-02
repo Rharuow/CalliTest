@@ -39,7 +39,7 @@
   .navbar a {
     color: #fff;
     text-decoration: none;
-    transition: all 0.2s;
+    transition: all 0.3s;
     padding: 15px;
     height: 100%;
   }
@@ -55,7 +55,7 @@
   <a href="/"><img class="header-brand-logo" src="interface/ufrn-logo.png" /></a> <?php /* $brand-logo */ ?>
 
   <nav class="navbar"> <?php /* $menu-items */ ?>
-    <a href="login.php">Login</a>
-    <a href="signup.php">Sign up</a>
+    <a href="login.php">Entrar</a>
+    <a href="signup.php">Cadastro</a>
   </nav>
 </header>
