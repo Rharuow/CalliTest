@@ -1,3 +1,4 @@
+<pre>
 <?php
 
     include("connection.php");
@@ -5,7 +6,9 @@
     /* INSERT */
 
     $pdo=conectar();
-        
+    /* Choose a table */
+    $table  =   "administrador";
+    /* put the parameters */    
     $id     = $_GET["id"];
 
     $nome   = $_GET["nome"];
@@ -16,20 +19,19 @@
 
     /* Prepara o Cadastro */
 
-    $adm    =   $pdo->prepare("INSERT INTO administrador (ID, nome, senha, sexo) VALUES(:id, :nome, :senha, :sexo)");
+    $inserir    =   $pdo->prepare("INSERT INTO $table (ID, nome, senha, sexo) VALUES(:id, :nome, :senha, :sexo)");
 
     /* Validar o cadastro */
 
-    $adm->bindValue(":id",$id);
+    $inserir->bindValue(":id",$id);
 
-    $adm->bindValue(":nome",$nome);
+    $inserir->bindValue(":nome",$nome);
 
-    $adm->bindValue(":senha",$senha);
+    $inserir->bindValue(":senha",$senha);
 
-    $adm->bindValue(":sexo",$sexo);
+    $inserir->bindValue(":sexo",$sexo);
 
-    
-    $validar=$pdo->prepare("Select * FROM administrador WHERE id=? or nome=? or senha=?");
+    $validar=$pdo->prepare("Select * FROM $table WHERE id=? or nome=? or senha=?");
     
     $validar->execute(array($id, $nome, $senha));
 
@@ -39,7 +41,7 @@
         
     /* Cadastrar */
 
-    $adm->execute();    
+    $inserir->execute(); 
         
     }
 
@@ -48,3 +50,4 @@
     }
 
 ?>
+</pre>
