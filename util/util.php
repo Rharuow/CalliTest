@@ -1,23 +1,31 @@
-function component($path, $variables = [], $print = true) {
-  $output = NULL;
+<?php
+  function component($path, $variables = [], $print = true) {
+    $prefixPath = $_SERVER['DOCUMENT_ROOT'];
+    $filePath = join(DIRECTORY_SEPARATOR, [$prefixPath, join(DIRECTORY_SEPARATOR, ['views', str_replace('.', DIRECTORY_SEPARATOR, $path) . (strpos($path, '.php') ? '' : '.php')])]);
+    $output = NULL;
 
-  if(file_exists($path)){
-    // Extract the variables to a local namespace
-    extract($variables);
+    if (file_exists($filePath)) {
+      extract($variables);
+      ob_start();
+      include_once $filePath;
+      $output = ob_get_clean();
+    }
 
-    // Start output buffering
-    ob_start();
+    if ($print) {
+      print $output;
+    }
 
-    // Include the template file
-    include $filePath;
-
-    // End buffering and return its contents
-    $output = ob_get_clean();
+    return $output;
   }
 
-  if ($print) {
-    print $output;
-  }
+  function asset($path, $print = true) {
+    $prefixPath = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != "off") ? "https" : "http") . '://' . $_SERVER['HTTP_HOST'];
+    $filePath = join('/', [$prefixPath, join('/', ['assets', preg_replace('/\./', '/', $path, substr_count($path, '.') - 1)])]);
 
-  return $output;
-}
+    if ($print) {
+      print $filePath;
+    }
+
+    return $filePath;
+  }
+?>
