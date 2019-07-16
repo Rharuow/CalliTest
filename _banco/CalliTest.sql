@@ -60,7 +60,9 @@ create table mem_ani (
 
 create table pesquisa (
 	ID int primary key,
-    nome varchar(40),
+	nome varchar(40),
+	data_inicio varchar(12),
+	data_fim varchar(12),
     ID_adm int,
     foreign key (ID_adm)
     references administrador(ID)
