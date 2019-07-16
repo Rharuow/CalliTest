@@ -158,3 +158,9 @@ create table resultado_tentativa_treinamento (
     foreign key (ID_ten)
     references tentativa_treinamento(ID)
 );
+
+delete from administrador where ID = 1;
+
+select * from administrador;
+
+INSERT INTO administrador (ID, nome, sexo) Values (1, "Harysson", "M");
