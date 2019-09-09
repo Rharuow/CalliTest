@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAdmsTable extends Migration
+class CreateTestsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateAdmsTable extends Migration
      */
     public function up()
     {
-        Schema::create('adms', function (Blueprint $table) {
+        Schema::create('tests', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('psw');
-            $table->enum('sex', ['M', 'F']);
+            $table->bigInteger('project_id')->unsigned();
+            $table->foreign('project_id')->references('id')->on('projects');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateAdmsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('adms');
+        Schema::dropIfExists('tests');
     }
 }
