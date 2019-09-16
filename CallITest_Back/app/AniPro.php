@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Ani_Mem extends Model
+class AniPro extends Model
 {
     //
 }

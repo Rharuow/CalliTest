@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Adm extends Model
+class ResultTryTraining extends Model
 {
     //
 }

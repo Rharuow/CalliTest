@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMembersTable extends Migration
+class CreateResultTryTrainingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,8 @@ class CreateMembersTable extends Migration
      */
     public function up()
     {
-        Schema::create('members', function (Blueprint $table) {
+        Schema::create('result_try_trainings', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('CPF')->unique();
-            $table->string('Num_registration_UFRN')->unique();
-            $table->string('course');
-            $table->string('RG')->unique();
-            $table->enum('sex', ['M', 'F']);
             $table->timestamps();
         });
     }
@@ -32,6 +26,6 @@ class CreateMembersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('members');
+        Schema::dropIfExists('result_try_trainings');
     }
 }

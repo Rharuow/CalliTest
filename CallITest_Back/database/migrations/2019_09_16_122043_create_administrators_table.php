@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateResultTryBateriesTable extends Migration
+class CreateAdministratorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class CreateResultTryBateriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('result__try__bateries', function (Blueprint $table) {
+        Schema::create('administrators', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name')->unique();
+            $table->string('psw');
+            $table->enum('sex', ['M', 'F'])->nullable();
+            $table->string('temporaryToken');
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ class CreateResultTryBateriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('result__try__bateries');
+        Schema::dropIfExists('administrators');
     }
 }

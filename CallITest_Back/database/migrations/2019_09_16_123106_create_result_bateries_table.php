@@ -13,8 +13,14 @@ class CreateResultBateriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('result__bateries', function (Blueprint $table) {
+        Schema::create('result_bateries', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->time('biggestErrorTime');
+            $table->int('totalError');
+            $table->time('totalTime');
+            $table->int('touchscreenNum');
+            $table->bigInteger('batery_ID')->unsigned();
+            $table->foreign('batery_ID')->references('id')->on('bateries');
             $table->timestamps();
         });
     }
@@ -26,6 +32,6 @@ class CreateResultBateriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('result__bateries');
+        Schema::dropIfExists('result_bateries');
     }
 }

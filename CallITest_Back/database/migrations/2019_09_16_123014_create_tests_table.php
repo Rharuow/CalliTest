@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBateriesTable extends Migration
+class CreateTestsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateBateriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('bateries', function (Blueprint $table) {
+        Schema::create('tests', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('type');
-            $table->bigInteger('numTry')->unsigned();
-            $table->bigInteger('test_id')->unsigned();
-            $table->foreign('test_id')->references('id')->on('tests');
+            $table->string('name')->unique();
+            $table->bigInteger('project_ID')->unsigned();
+            $table->foreign('project_ID')->references('id')->on('projects');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateBateriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bateries');
+        Schema::dropIfExists('tests');
     }
 }
