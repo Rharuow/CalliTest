@@ -15,6 +15,12 @@ class CreateTrainingsTable extends Migration
     {
         Schema::create('trainings', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->int('tryNum');
+            $table->time('tryTime');
+            $table->time('errorTime');
+            $table->time('rewardTime');
+            $table->bigInteger('test_ID')->unsigned();
+            $table->foreign('test_ID')->references('id')->on('tests');
             $table->timestamps();
         });
     }

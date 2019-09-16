@@ -16,9 +16,8 @@ class CreateTryBateriesTable extends Migration
         Schema::create('try_bateries', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->int('type');
-            $table->int('totalError');
-            $table->time('totalTime');
-            $table->int('touchscreenNum');
+            $table->int('shape');
+            $table->time('color');
             $table->bigInteger('batery_ID')->unsigned();
             $table->foreign('batery_ID')->references('id')->on('bateries');
             $table->timestamps();

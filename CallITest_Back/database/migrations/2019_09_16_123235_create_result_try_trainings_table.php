@@ -15,6 +15,11 @@ class CreateResultTryTrainingsTable extends Migration
     {
         Schema::create('result_try_trainings', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->time('firstErroTime');
+            $table->time('totalTime');
+            $table->int('touchscreenNum');
+            $table->bigInteger('try_training_ID')->unsigned();
+            $table->foreign('try_training_ID')->references('id')->on('try_trainings');
             $table->timestamps();
         });
     }
