@@ -16,9 +16,9 @@ class CreateResultBateriesTable extends Migration
         Schema::create('result_bateries', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->time('biggestErrorTime');
-            $table->int('totalError');
+            $table->integer('totalError');
             $table->time('totalTime');
-            $table->int('touchscreenNum');
+            $table->integer('touchscreenNum');
             $table->bigInteger('batery_ID')->unsigned();
             $table->foreign('batery_ID')->references('id')->on('bateries');
             $table->timestamps();

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAniProsTable extends Migration
+class CreateProMemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateAniProsTable extends Migration
      */
     public function up()
     {
-        Schema::create('ani_pro', function (Blueprint $table) {
-            $table->bigInteger('animal_ID')->unsigned();
-            $table->foreign('animal_ID')->references('id')->on('animals');
+        Schema::create('pro_mems', function (Blueprint $table) {
             $table->bigInteger('project_ID')->unsigned();
             $table->foreign('project_ID')->references('id')->on('projects');
-            $table->primary(['animal_ID','project_ID']);
+            $table->bigInteger('member_ID')->unsigned();
+            $table->foreign('member_ID')->references('id')->on('members');
+            $table->primary(['member_ID','project_ID']);
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateAniProsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ani_pros');
+        Schema::dropIfExists('pro_mems');
     }
 }

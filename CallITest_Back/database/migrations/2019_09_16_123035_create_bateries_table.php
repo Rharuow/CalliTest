@@ -15,7 +15,7 @@ class CreateBateriesTable extends Migration
     {
         Schema::create('bateries', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->int('tryNum');
+            $table->integer('tryNum');
             $table->time('tryTime');
             $table->time('errorTime');
             $table->time('rewardTime');

@@ -22,6 +22,8 @@ class CreateMembersTable extends Migration
             $table->enum('sex', ['M', 'F'])->nullable();
             $table->string('registration')->unique()->nullable();
             $table->string('course')->nullable();
+            $table->bigInteger("administrators_ID")->unsigned();
+            $table->foreign("administrators_ID")->references("id")->on("administrators");
             $table->timestamps();
         });
     }

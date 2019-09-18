@@ -15,8 +15,8 @@ class CreateTryTrainingsTable extends Migration
     {
         Schema::create('try_trainings', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->int('type');
-            $table->int('shape');
+            $table->integer('type');
+            $table->integer('shape');
             $table->time('color');
             $table->bigInteger('training_ID')->unsigned();
             $table->foreign('training_ID')->references('id')->on('trainings');

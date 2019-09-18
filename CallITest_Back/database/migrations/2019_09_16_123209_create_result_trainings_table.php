@@ -16,9 +16,9 @@ class CreateResultTrainingsTable extends Migration
         Schema::create('result_trainings', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->time('biggestErrorTime');
-            $table->int('totalError');
+            $table->integer('totalError');
             $table->time('totalTime');
-            $table->int('touchscreenNum');
+            $table->integer('touchscreenNum');
             $table->bigInteger('training_ID')->unsigned();
             $table->foreign('training_ID')->references('id')->on('trainings');
             $table->timestamps();

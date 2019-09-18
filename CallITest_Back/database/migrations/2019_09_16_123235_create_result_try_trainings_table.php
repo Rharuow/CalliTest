@@ -17,7 +17,7 @@ class CreateResultTryTrainingsTable extends Migration
             $table->bigIncrements('id');
             $table->time('firstErroTime');
             $table->time('totalTime');
-            $table->int('touchscreenNum');
+            $table->integer('touchscreenNum');
             $table->bigInteger('try_training_ID')->unsigned();
             $table->foreign('try_training_ID')->references('id')->on('try_trainings');
             $table->timestamps();
