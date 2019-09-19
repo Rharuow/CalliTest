@@ -19,8 +19,8 @@ class CreateResultBateriesTable extends Migration
             $table->integer('totalError');
             $table->time('totalTime');
             $table->integer('touchscreenNum');
-            $table->bigInteger('batery_ID')->unsigned();
-            $table->foreign('batery_ID')->references('id')->on('bateries');
+            $table->bigInteger('batery_id')->unsigned();
+            $table->foreign('batery_id')->references('id')->on('bateries');
             $table->timestamps();
         });
     }

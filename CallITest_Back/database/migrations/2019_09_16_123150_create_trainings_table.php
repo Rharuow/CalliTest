@@ -19,8 +19,8 @@ class CreateTrainingsTable extends Migration
             $table->time('tryTime');
             $table->time('errorTime');
             $table->time('rewardTime');
-            $table->bigInteger('test_ID')->unsigned();
-            $table->foreign('test_ID')->references('id')->on('tests');
+            $table->bigInteger('test_id')->unsigned();
+            $table->foreign('test_id')->references('id')->on('tests');
             $table->timestamps();
         });
     }

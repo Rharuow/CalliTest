@@ -16,8 +16,8 @@ class Animal extends Model
         'obs'
     ];
 
-    function projects() {
-        return $this->belongsToMany('App\Project', 'ani_pro');
+    function project() {
+        return $this->belongsToMany('App\Project', 'animal_project');
     }
 
 }

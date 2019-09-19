@@ -18,8 +18,8 @@ class CreateTryTrainingsTable extends Migration
             $table->integer('type');
             $table->integer('shape');
             $table->time('color');
-            $table->bigInteger('training_ID')->unsigned();
-            $table->foreign('training_ID')->references('id')->on('trainings');
+            $table->bigInteger('training_id')->unsigned();
+            $table->foreign('training_id')->references('id')->on('trainings');
             $table->timestamps();
         });
     }

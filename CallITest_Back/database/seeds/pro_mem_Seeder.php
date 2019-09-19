@@ -11,12 +11,12 @@ class pro_mem_Seeder extends Seeder
      */
     public function run()
     {
-        DB::table('pro_mems')->insert(["project_ID"=>1,"member_ID"=>2]);
-        DB::table('pro_mems')->insert(["project_ID"=>2,"member_ID"=>1]);
-        DB::table('pro_mems')->insert(["project_ID"=>3,"member_ID"=>3]);
-        DB::table('pro_mems')->insert(["project_ID"=>4,"member_ID"=>2]);
-        DB::table('pro_mems')->insert(["project_ID"=>2,"member_ID"=>4]);
-        DB::table('pro_mems')->insert(["project_ID"=>3,"member_ID"=>1]);
-        DB::table('pro_mems')->insert(["project_ID"=>4,"member_ID"=>1]);
+        DB::table('pro_mem')->insert(["project_id"=>1,"member_id"=>2]);
+        DB::table('pro_mem')->insert(["project_id"=>2,"member_id"=>1]);
+        DB::table('pro_mem')->insert(["project_id"=>3,"member_id"=>3]);
+        DB::table('pro_mem')->insert(["project_id"=>4,"member_id"=>2]);
+        DB::table('pro_mem')->insert(["project_id"=>2,"member_id"=>4]);
+        DB::table('pro_mem')->insert(["project_id"=>3,"member_id"=>1]);
+        DB::table('pro_mem')->insert(["project_id"=>4,"member_id"=>1]);
     }
 }

@@ -18,8 +18,8 @@ class CreateTryBateriesTable extends Migration
             $table->integer('type');
             $table->integer('shape');
             $table->time('color');
-            $table->bigInteger('batery_ID')->unsigned();
-            $table->foreign('batery_ID')->references('id')->on('bateries');
+            $table->bigInteger('batery_id')->unsigned();
+            $table->foreign('batery_id')->references('id')->on('bateries');
             $table->timestamps();
         });
     }
