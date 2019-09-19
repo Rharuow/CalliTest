@@ -11,9 +11,9 @@ class ProjetosSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('projects')->insert(['name'=>"Projeto 1"]);
-        DB::table('projects')->insert(['name'=>"Projeto 2"]);
-        DB::table('projects')->insert(['name'=>"Projeto 3"]);
-        DB::table('projects')->insert(['name'=>"Projeto 4"]);
+        DB::table('projects')->insert(['name'=>"Projeto 1", 'administrators_id'=>"4"]);
+        DB::table('projects')->insert(['name'=>"Projeto 2", 'administrators_id'=>"3"]);
+        DB::table('projects')->insert(['name'=>"Projeto 3", 'administrators_id'=>"2"]);
+        DB::table('projects')->insert(['name'=>"Projeto 4", 'administrators_id'=>"1"]);
     }
 }

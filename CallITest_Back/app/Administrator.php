@@ -13,7 +13,12 @@ class Administrator extends Model
         'temporaryToken'
     ];
 
-    public function members()
+    public function project()
+    {
+        return $this->hasMany('App\Project');
+    }
+
+    public function member()
     {
         return $this->hasMany('App\Member');
     }
