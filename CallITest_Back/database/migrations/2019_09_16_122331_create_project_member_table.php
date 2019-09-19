@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProMemTable extends Migration
+class CreateProjectMemberTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateProMemTable extends Migration
      */
     public function up()
     {
-        Schema::create('pro_mem', function (Blueprint $table) {
+        Schema::create('project_member', function (Blueprint $table) {
             $table->bigInteger('project_id')->unsigned();
             $table->foreign('project_id')->references('id')->on('projects');
             $table->bigInteger('member_id')->unsigned();
@@ -30,6 +30,6 @@ class CreateProMemTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pro_mem');
+        Schema::dropIfExists('project_member');
     }
 }

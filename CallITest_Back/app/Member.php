@@ -10,4 +10,7 @@ class Member extends Model
     {
         return $this->belongsTo('App\Administrator');
     }
+    function project() {
+        return $this->belongsToMany('App\Project', 'project_member');
+    }
 }

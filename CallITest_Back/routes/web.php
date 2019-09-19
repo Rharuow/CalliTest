@@ -73,30 +73,39 @@ Route::get('/Membros', function () {
 Route::get('/Animais', function () {
     $animals = Animal::with('project')->get();
     
-    echo "<table>";
-    echo "<tr>";
-    echo "<th>Nome</th>";
-    echo "<th>Código</th>";
-    echo "<th>Sexo</th>";
-    echo "<th>Marcação</th>";
-    echo "<th>Gaiola</th>";
-    echo "<th>Data de Nascimento</th>";
-    echo "<th>Projeto</th>";
-    echo "</tr>";
+    echo "<h3> Informações de animais e relacionamento com Projetos</h3>";
+    echo "<ul>";
     foreach ($animals as $a) {
-        // dd($animals);
-        echo "<tr>";
-        echo "<td>" . $a->name . "</td>";
-        echo "<td>" . $a->code . "</td>";
-        echo "<td>" . $a->sex . "</td>";
-        echo "<td>" . $a->marking . "</td>";
-        echo "<td>" . $a->cage . "</td>";
-        echo "<td>" . $a->birthday . "</td>";
-        echo "<td>" . $a->OBS . "</td>";
+        echo "<li> <strong> Nome: </strong>" . $a->name . " </li>";
+        echo "<li> <strong> Código: <strong> " . $a->code . "</li>";
+        echo "<li> <strong> Sexo: <strong> " . $a->sex . "</li>";
+        echo "<li> <strong> Marcação: <strong> " . $a->marking . "</li>";
+        echo "<li> <strong> Gaiola: <strong> " . $a->cage . "</li>";
+        echo "<li> <strong> Data de Nascimento: <strong> " . $a->birthday . "</li>";
+        echo "<li> <strong> OBS: <strong> " . $a->OBS . "</li>";
+        echo "<h4> Projetos </h4>";
         foreach ($a->project as $p) {
-            echo "<td>" . $p->name . "</td>";
+            echo " | " . $p->name . " | ";
         }
-        echo "</tr>";
+        echo "<hr>";
+        echo "</ul>";
+    }
+
+});
+
+Route::get('/Projetos', function () {
+    $projects = Project::with('member')->get();
+    
+    echo "<h3> Informações de animais e relacionamento com Projetos</h3>";
+    echo "<ul>";
+    foreach ($projects as $p) {
+        echo "<li> <strong> Nome: </strong>" . $p->name . " </li>";
+        echo "<h4> Membros </h4>";
+        foreach ($p->member as $m) {
+            echo " | " . $m->name . " | ";
+        }
+        echo "<hr>";
+        echo "</ul>";
     }
 
 });
