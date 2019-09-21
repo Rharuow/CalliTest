@@ -11,6 +11,10 @@ class Batery extends Model
         return $this->hasMany('App\ResultBatery');
     }
 
+    public function tryBatery() {
+        return $this->hasMany('App\TryBatery');
+    }
+
     public function test()
     {
         return $this->belongsTo('App\Test');

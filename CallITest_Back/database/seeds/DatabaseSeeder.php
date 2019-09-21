@@ -19,5 +19,12 @@ class DatabaseSeeder extends Seeder
         $this->call(pro_mem_Seeder::class);
         $this->call(TestSeeder::class);
         $this->call(BateriersSeeder::class);
+        $this->call(ResultBaterySeeder::class);
+        $this->call(TryBaterySeeder::class);
+        $this->call(ResultTryBaterySeeder::class);
+        $this->call(TrainingSeeder::class);
+        $this->call(ResultTrainingSeeder::class);
+        $this->call(TryTrainingSeeder::class);
+        $this->call(ResultTryTrainingSeeder::class);
     }
 }

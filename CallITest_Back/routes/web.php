@@ -6,17 +6,13 @@ use App\Animal;
 use App\Batery;
 use App\Project;
 use App\Test;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\ResultBatery;
+use App\TryBatery;
+use App\ResultTryBatery;
+use App\Training;
+use App\ResultTraining;
+use App\TryTraining;
+use App\ResultTryTraining;
 
 Route::get('/', function () {
     return view('welcome');
@@ -135,7 +131,98 @@ Route::get('/ResultadosBaterias', function () {
         echo "<li> <strong> totalError: </strong>" . $rb->tryTime . " </li>";
         echo "<li> <strong> totalTime: </strong>" . $rb->errorTime . " </li>";
         echo "<li> <strong> touchscreenNum: </strong>" . $rb->rewardTime . " </li>";
-        echo "<li> <strong> batery_id: </strong>" . $rb->test->name . " </li>";
+        echo "<li> <strong> batery_id: </strong>" . $rb->batery->id . " </li>";
+        echo "<hr>";
+        echo "</ul>";
+    }
+});
+
+Route::get('/Tentativa_Bateria', function () {
+    $tryBatery = TryBatery::all();
+    echo "<h3> Informações de Tentativa das Baterias </h3>";
+    echo "<ul>";
+    foreach ($tryBatery as $tb) {
+        echo "<li> <strong> id: </strong>" . $tb->id . " </li>";
+        echo "<li> <strong> type: </strong>" . $tb->type . " </li>";
+        echo "<li> <strong> shape: </strong>" . $tb->shape . " </li>";
+        echo "<li> <strong> color: </strong>" . $tb->color . " </li>";
+        echo "<li> <strong> batery_id: </strong>" . $tb->batery->id . " </li>";
+        echo "<hr>";
+        echo "</ul>";
+    }
+});
+
+Route::get('/Result_Tentativa_Bateria', function () {
+    $resultTryBatery = ResultTryBatery::all();
+    echo "<h3> Informações de Resultados das Tentativa das Baterias </h3>";
+    echo "<ul>";
+    foreach ($resultTryBatery as $rtb) {
+        echo "<li> <strong> id: </strong>" . $rtb->id . " </li>";
+        echo "<li> <strong> firstErroTime: </strong>" . $rtb->firstErroTime . " </li>";
+        echo "<li> <strong> totalTime: </strong>" . $rtb->totalTime . " </li>";
+        echo "<li> <strong> touchscreenNum: </strong>" . $rtb->touchscreenNum . " </li>";
+        echo "<li> <strong> try_bateries_id: </strong>" . $rtb->tryBateries->id . " </li>";
+        echo "<hr>";
+        echo "</ul>";
+    }
+});
+
+Route::get('/Trainamento', function () {
+    $trainings = Training::all();
+    echo "<h3> Informações de Trainamento </h3>";
+    echo "<ul>";
+    foreach ($trainings as $t) {
+        echo "<li> <strong> id: </strong>" . $t->id . " </li>";
+        echo "<li> <strong> firstErroTime: </strong>" . $t->firstErroTime . " </li>";
+        echo "<li> <strong> totalTime: </strong>" . $t->totalTime . " </li>";
+        echo "<li> <strong> touchscreenNum: </strong>" . $t->touchscreenNum . " </li>";
+        echo "<li> <strong> test: </strong>" . $t->test->id . " </li>";
+        echo "<hr>";
+        echo "</ul>";
+    }
+});
+
+Route::get('/Resultado_Trainamento', function () {
+    $resultTraining = ResultTraining::all();
+    echo "<h3> Informações de Resultado do Trainamento </h3>";
+    echo "<ul>";
+    foreach ($resultTraining as $rt) {
+        echo "<li> <strong> id: </strong>" . $rt->id . " </li>";
+        echo "<li> <strong> biggestErrorTime: </strong>" . $rt->biggestErrorTime . " </li>";
+        echo "<li> <strong> totalError: </strong>" . $rt->totalError . " </li>";
+        echo "<li> <strong> totalTime: </strong>" . $rt->totalTime . " </li>";
+        echo "<li> <strong> touchscreenNum: </strong>" . $rt->touchscreenNum . " </li>";
+        echo "<li> <strong> training_id: </strong>" . $rt->training->id . " </li>";
+        echo "<hr>";
+        echo "</ul>";
+    }
+});
+
+Route::get('/Tentativa_Trainamento', function () {
+    $tryTraining = TryTraining::all();
+    echo "<h3> Informações de Tentativas do Trainamento </h3>";
+    echo "<ul>";
+    foreach ($tryTraining as $tt) {
+        echo "<li> <strong> id: </strong>" . $tt->id . " </li>";
+        echo "<li> <strong> type: </strong>" . $tt->type . " </li>";
+        echo "<li> <strong> shape: </strong>" . $tt->shape . " </li>";
+        echo "<li> <strong> color: </strong>" . $tt->color . " </li>";
+        echo "<li> <strong> training_id: </strong>" . $tt->training->id . " </li>";
+        echo "<hr>";
+        echo "</ul>";
+    }
+});
+
+Route::get('/Resultado_Tentativa_Trainamento', function () {
+    $resultTryTraining = ResultTryTraining::all();
+    echo "<h3> Informações de Resultado das Tentativas do Trainamento </h3>";
+    echo "<ul>";
+    foreach ($resultTryTraining as $rtt) {
+        echo "<li> <strong> id: </strong>" . $rtt->id . " </li>";
+        echo "<li> <strong> firstErroTime: </strong>" . $rtt->firstErroTime . " </li>";
+        echo "<li> <strong> totalTime: </strong>" . $rtt->totalTime . " </li>";
+        echo "<li> <strong> touchscreenNum: </strong>" . $rtt->touchscreenNum . " </li>";
+        echo "<li> <strong> try_training_id: </strong>" . $rtt->tryTraining->id . " </li>";
         echo "<hr>";
         echo "</ul>";
     }

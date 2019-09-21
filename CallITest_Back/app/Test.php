@@ -11,6 +11,10 @@ class Test extends Model
         return $this->hasMany('App\Batery');
     }
 
+    public function trainings() {
+        return $this->hasMany('App\Training');
+    }
+
     public function project()
     {
         return $this->belongsTo('App\Project');
