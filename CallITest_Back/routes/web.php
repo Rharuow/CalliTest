@@ -3,7 +3,9 @@
 use App\Administrator;
 use App\Member;
 use App\Animal;
+use App\Batery;
 use App\Project;
+use App\Test;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,6 +90,52 @@ Route::get('/Projetos', function () {
         foreach ($p->member as $m) {
             echo " | " . $m->name . " | ";
         }
+        echo "<hr>";
+        echo "</ul>";
+    }
+});
+
+Route::get('/Testes', function () {
+    $tests = Test::all();
+    echo "<h3> Informações de Testes</h3>";
+    echo "<ul>";
+    foreach ($tests as $t) {
+        echo "<li> <strong> Nome: </strong>" . $t->name . " </li>";
+        echo "<li> <strong> Orientador: </strong>" . $t->project->name . " </li>";
+        echo "<h4> Membros </h4>";
+        echo "<hr>";
+        echo "</ul>";
+    }
+});
+
+Route::get('/Baterias', function () {
+    $bateries = Batery::all();
+    echo "<h3> Informações de Baterias</h3>";
+    echo "<ul>";
+    foreach ($bateries as $b) {
+        echo "<li> <strong> id: </strong>" . $b->id . " </li>";
+        echo "<li> <strong> tryNum: </strong>" . $b->tryNum . " </li>";
+        echo "<li> <strong> tryTime: </strong>" . $b->tryTime . " </li>";
+        echo "<li> <strong> errorTime: </strong>" . $b->errorTime . " </li>";
+        echo "<li> <strong> rewardTime: </strong>" . $b->rewardTime . " </li>";
+        echo "<li> <strong> showingTime: </strong>" . $b->showingTime . " </li>";
+        echo "<li> <strong> tests: </strong>" . $b->test->name . " </li>";
+        echo "<hr>";
+        echo "</ul>";
+    }
+});
+
+Route::get('/ResultadosBaterias', function () {
+    $resultBateries = ResultBatery::all();
+    echo "<h3> Informações de Resultados das Baterias </h3>";
+    echo "<ul>";
+    foreach ($resultBateries as $rb) {
+        echo "<li> <strong> id: </strong>" . $rb->id . " </li>";
+        echo "<li> <strong> biggestErrorTime: </strong>" . $rb->tryNum . " </li>";
+        echo "<li> <strong> totalError: </strong>" . $rb->tryTime . " </li>";
+        echo "<li> <strong> totalTime: </strong>" . $rb->errorTime . " </li>";
+        echo "<li> <strong> touchscreenNum: </strong>" . $rb->rewardTime . " </li>";
+        echo "<li> <strong> batery_id: </strong>" . $rb->test->name . " </li>";
         echo "<hr>";
         echo "</ul>";
     }

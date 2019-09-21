@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
 
+    public function tests() {
+        return $this->hasMany('App\Test');
+    }
+
     public function administrators()
     {
         return $this->belongsTo('App\Administrator');
