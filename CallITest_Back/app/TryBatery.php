@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class TryBatery extends Model
 {
 
-    public function resultTryBatery()
+    public function resultTryBateries()
     {
         return $this->hasMany('App\ResultTryBatery');
     }

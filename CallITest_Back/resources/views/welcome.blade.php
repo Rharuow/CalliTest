@@ -81,17 +81,23 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    CalliTest
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{ route('adm') }}">Administradores</a>
+                    <a href="{{ route('members') }}">Membros</a>
+                    <a href="{{ route('animals') }}">Animais</a>
+                    <a href="{{ route('projects') }}">Projetos</a>
+                    <a href="{{ route('tests') }}">Testes</a>
+                    <a href="{{ route('bateries') }}">Baterias</a>
+                    <a href="{{ route('try_bateries') }}">Tentativas de baterias</a>
+                    <a href="{{ route('resultBateries') }}">Resultados-Baterias</a>
+                    <a href="{{ route('try_result_bateries') }}">Resultados-tentativa-Baterias</a>
+                    <a href="{{ route('trainings') }}">Treinamento</a>
+                    <a href="{{ route('try_trainings') }}">Tentativas de Treinamento</a>
+                    <a href="{{ route('result_trainings') }}">Resultados-Treinamento</a>
+                    <a href="{{ route('try_result_trainings') }}">Resultados-tentativa-Treinamento</a>
                 </div>
             </div>
         </div>
